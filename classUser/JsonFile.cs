@@ -15,6 +15,9 @@ namespace classUser
         private static string path = @"C:\Users\user\Desktop\Новая папка\contentCard.json";
         private static string pathNew = @"C:\Users\user\Desktop\Новая папка\Новый текстовый документ.Json";
         public static List<UserJS> users1 = new List<UserJS>();
+        /// <summary>
+        /// вывод записей с информацией пользователей
+        /// </summary>
         public static void  FileReading()
         {
             List<UserJS> users = new List<UserJS>();
@@ -35,11 +38,17 @@ namespace classUser
             }
             users1 = usersRedlain;
         }
+        /// <summary>
+        /// изменение файла
+        /// </summary>
         public static void fileReadMap()
         {
             string json = JsonConvert.SerializeObject(users1);// создания сериализации
             File.WriteAllText(pathNew, json);// запись
         }
+        /// <summary>
+        /// проверка хешированной информации
+        /// </summary>
         public static void fileNew()
         {
             List<UserJS> users = new List<UserJS>();
@@ -74,7 +83,9 @@ namespace classUser
                 Console.WriteLine($"имя: {item.Name}, карта: {item.Creditcard}, пароль: {item.Password}");
             }
         }
-
+        /// <summary>
+        /// конструктор пользователей из файла
+        /// </summary>
         public class UserJS
         {
           public   string   Name { get; set; }

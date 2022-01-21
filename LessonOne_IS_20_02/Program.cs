@@ -26,7 +26,9 @@ namespace LessonOne_IS_20_02
                 hifrPassword();
             }
         }
-
+        /// <summary>
+        /// шифровка паролей
+        /// </summary>
         public static void hifrMessage()
         {
             while (true)
@@ -40,6 +42,9 @@ namespace LessonOne_IS_20_02
                 Console.WriteLine($"{contentAES}");
             }
         }
+        /// <summary>
+        /// хеширование для внутренних пользователей
+        /// </summary>
         public static void hifrPassword()
         {
             while(true)
@@ -60,6 +65,9 @@ namespace LessonOne_IS_20_02
                 Console.WriteLine(" Пароль : " + classUser.Protector.CheckPassword(name1, password1));
             }
         }
+        /// <summary>
+        /// хеширование из файла
+        /// </summary>
         public static void FilePassword()
         {
             

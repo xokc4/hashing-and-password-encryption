@@ -14,6 +14,12 @@ namespace classUser
             Encoding.Unicode.GetBytes("7BANANAS");
         private static readonly int iterations = 2000;
         public static int PasswordUsersFile = 1111;
+        /// <summary>
+        /// кодирования пароля
+        /// </summary>
+        /// <param name="plainText"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public static string Encrypt(string plainText, string password)
         {
             byte[] encryptedBytes;
@@ -33,6 +39,12 @@ namespace classUser
             }
             return Convert.ToBase64String(encryptedBytes);        
         }
+        /// <summary>
+        /// раскодирование паролей
+        /// </summary>
+        /// <param name="cryptoText"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public static string Decrypt(string cryptoText, string password)
         {
             byte[] plainBytes;

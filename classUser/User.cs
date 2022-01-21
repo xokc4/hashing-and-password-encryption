@@ -2,6 +2,9 @@
 
 namespace classUser
 {
+    /// <summary>
+    /// конструктор пользователей для внутрненних пользователей
+    /// </summary>
     public class User
     {
         public string Name { get; set; }
